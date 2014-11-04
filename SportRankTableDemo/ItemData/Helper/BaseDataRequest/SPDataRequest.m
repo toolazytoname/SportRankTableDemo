@@ -200,6 +200,57 @@
 
 
 
+@implementation SPCBATeamRankRequest : SPBaseDataRequest
+-(NSString *)getURL
+{
+    return @"http://platform.sina.com.cn/sports_all/client_api?";
+}
+-(SPHTTPRequestMethod)getHttpRequestMethod
+{
+    return SPHTTPRequestMethodGET;
+}
+
+-(void)dataProcess
+{
+    [super dataProcess];
+    NSArray *itemArray = [[self.resultDataDic objectForKeyNotNull:@"result"] objectForKeyNotNull:@"data"] ;
+    NSMutableArray *returnDataArray = [NSMutableArray array];
+    if (itemArray && [itemArray isKindOfClass:[NSArray class]]) {
+        [itemArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            if ([obj isKindOfClass:[NSDictionary class]]) {
+//                SPCBATeamOrderItem *item = [SPCBATeamOrderItem modelObjectWithDictionary:obj];
+                NSMutableDictionary *item = [NSMutableDictionary dictionaryWithDictionary:obj];
+                
+//                主场战绩
+                NSString *hostScore = [NSString stringWithFormat:@"%@胜%@负",[item objectForKey:@"host_win"],[item objectForKey:@"host_lose"]];
+//                客场战绩
+                NSString *gusetScore = [NSString stringWithFormat:@"%@胜%@负",[item objectForKey:@"guest_win"],[item objectForKey:@"guest_lose"]];
+                [item setObject:hostScore forKey:@"hostScore"];
+                [item setObject:gusetScore forKey:@"gusetScore"];
+                
+                //几连胜 或者 几连负
+                NSString *state = @"";
+                NSInteger consec_win = [[item objectForKey:@"consec_win"]integerValue];
+                NSInteger consec_lose = [[item objectForKey:@"consec_lose"]integerValue];
+                if (consec_win > 0) {
+                    state = [NSString stringWithFormat:@"%ld连胜",(long)consec_win];
+                }
+                if (consec_lose > 0) {
+                    state = [NSString stringWithFormat:@"%ld连负",(long)consec_lose];
+                }
+                if (consec_win == 0 && consec_lose == 0) {
+                    state = @"";
+                }
+                [item setObject:state forKey:@"state"];
+                [returnDataArray addObject:item];
+            }
+        }];
+    }
+    if (returnDataArray && returnDataArray.count >0) {
+        [self.resultDataDic setObject:returnDataArray forKey:SPCBATeamRankKey];
+    }
+}
+@end
 
 
 

@@ -55,3 +55,12 @@
 @interface SPFootballTeamRankRequest : SPBaseDataRequest
 
 @end
+
+/*
+ 获取CBA球队排行榜
+ */
+#define SPCBATeamRankKey @"SPCBATeamRankKey"
+@interface SPCBATeamRankRequest : SPBaseDataRequest
+
+@end
+
