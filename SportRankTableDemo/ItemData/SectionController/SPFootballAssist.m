@@ -11,6 +11,6 @@
 @implementation SPFootballAssist
 -(void)requestData
 {
-    [self requestFootballPlayerRank:@"2"];
+    [self requestFootballPlayerRank:@"2" limit:@"10"];
 }
 @end

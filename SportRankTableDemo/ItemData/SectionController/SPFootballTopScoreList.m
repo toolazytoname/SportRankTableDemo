@@ -11,14 +11,14 @@
 @implementation SPFootballTopScoreList
 -(void)requestData
 {
-    [self requestFootballPlayerRank:@"13"];
+    [self requestFootballPlayerRank:@"13" limit:@"20"];
 }
--(void)requestFootballPlayerRank:(NSString *)item
+-(void)requestFootballPlayerRank:(NSString *)item limit:(NSString *)limit
 {
     
     NSString *data_from = self.param.itemDataFrom;
     NSString *itemID = self.param.itemID;
-    if(data_from && item && itemID)
+    if(data_from && item && itemID && limit)
     {
         NSDictionary *paramDic = @{@"app_key": PlatFormAppKey,
                                    @"_sport_t_": @"football",
@@ -26,12 +26,13 @@
                                    @"type": itemID,
                                    @"_sport_s_": data_from,
                                    @"item":item,
-                                   @"limit":@"10"
+                                   @"limit":limit
                                    };
         [self addRequest:[SPFootballPlayerRankRequest requestWithDelegate:self parameters:paramDic isUseCache:YES]];
     }
     
 }
+
 
 #pragma mark - 网络请求
 - (void)requestDidStartLoad:(BaseDataRequest*)request

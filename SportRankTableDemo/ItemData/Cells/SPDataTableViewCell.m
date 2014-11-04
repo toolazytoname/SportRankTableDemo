@@ -56,16 +56,7 @@
             UILabel *label = (UILabel *)[self.contentView viewWithTag:(baseTagNum+i)];
             NSString *selecterName = [keys safeObjectAtIndex:i];
             SEL selector = NSSelectorFromString(selecterName);
-            if ([item respondsToSelector:selector]) {
-                bool isobject = IS_OBJECT([item performSelector:selector]);
-                if (isobject) {
-                    label.text = [NSString stringWithFormat:@"%@",[item performSelector:selector]];
-                }
-                else
-                {
-                    label.text = [NSString stringWithFormat:@"%f",[[item performSelector:selector] doubleValue]];
-                }
-            }
+            label.text = [NSString stringWithFormat:@"%@",[item performSelector:selector]];
         }
         [self setIsDarkRow:(indexPath.row %2 != 0)];
     }
@@ -87,7 +78,7 @@
         UILabel *label = (UILabel *)[self.contentView viewWithTag:(baseTagNum+i)];
         NSNumber *currentFloatNumber = [widths safeObjectAtIndex:i];
         float x = [self getXValue:widths index:i];
-        label.frame = CGRectMake(x, 0, currentFloatNumber.floatValue, 25);
+        label.frame = CGRectMake(x, 0, currentFloatNumber.floatValue, 24);
     }
 }
 

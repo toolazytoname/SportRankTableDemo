@@ -11,6 +11,6 @@
 @implementation SPFootballClearanceKick
 -(void)requestData
 {
-    [self requestFootballPlayerRank:@"10"];
+    [self requestFootballPlayerRank:@"10" limit:@"10"];
 }
 @end

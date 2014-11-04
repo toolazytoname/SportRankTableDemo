@@ -27,7 +27,7 @@
 @property (nonatomic, strong) NSString *homeLose;
 @property (nonatomic, strong) NSString *draw;
 @property (nonatomic, strong) NSString *awayDraw;
-@property (nonatomic, assign) double teamOrder;
+@property (nonatomic, assign) NSString *teamOrder;
 @property (nonatomic, strong) NSString *lose;
 @property (nonatomic, strong) NSString *awayLose;
 @property (nonatomic, strong) NSString *group;

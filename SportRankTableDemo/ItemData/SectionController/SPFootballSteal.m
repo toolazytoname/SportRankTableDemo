@@ -11,6 +11,6 @@
 @implementation SPFootballSteal
 -(void)requestData
 {
-    [self requestFootballPlayerRank:@"7"];
+    [self requestFootballPlayerRank:@"7" limit:@"10"];
 }
 @end

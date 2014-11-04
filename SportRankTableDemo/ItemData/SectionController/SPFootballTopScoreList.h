@@ -12,5 +12,5 @@
  *  射手榜
  */
 @interface SPFootballTopScoreList : SPItemDataBaseSectionController
--(void)requestFootballPlayerRank:(NSString *)item;
+-(void)requestFootballPlayerRank:(NSString *)item limit:(NSString *)limit;
 @end

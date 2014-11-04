@@ -11,6 +11,6 @@
 @implementation SPFootballFoul
 -(void)requestData
 {
-    [self requestFootballPlayerRank:@"8"];
+    [self requestFootballPlayerRank:@"8" limit:@"10"];
 }
 @end

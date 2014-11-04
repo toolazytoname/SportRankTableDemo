@@ -11,6 +11,6 @@
 @implementation SPFootballKillerBalls
 -(void)requestData
 {
-    [self requestFootballPlayerRank:@"4"];
+    [self requestFootballPlayerRank:@"4" limit:@"10"];
 }
 @end

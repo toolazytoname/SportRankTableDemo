@@ -13,6 +13,6 @@
 @implementation SPFootballPlayingTime
 -(void)requestData
 {
-    [self requestFootballPlayerRank:@"12"];
+    [self requestFootballPlayerRank:@"12" limit:@"10"];
 }
 @end

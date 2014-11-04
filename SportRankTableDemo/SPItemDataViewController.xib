@@ -15,9 +15,26 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="48T-mB-9uv">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rwx-td-vln">
+                    <rect key="frame" x="0.0" y="30" width="56" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="56" id="Rbl-uM-4oL"/>
+                        <constraint firstAttribute="height" constant="30" id="ZLn-dz-Kps"/>
+                    </constraints>
+                    <state key="normal" title="back">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="hideAction:" destination="-1" eventType="touchUpInside" id="qTd-d2-48I"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="48T-mB-9uv">
+                    <rect key="frame" x="140" y="60" width="320" height="540"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="570" id="5b5-ef-lKh"/>
+                        <constraint firstAttribute="width" constant="320" id="jHy-B6-THF"/>
+                    </constraints>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="56K-s5-gTy"/>
                         <outlet property="delegate" destination="-1" id="Fja-YN-Eev"/>
@@ -25,6 +42,14 @@
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Rwx-td-vln" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="1N0-P9-Hhg"/>
+                <constraint firstAttribute="centerX" secondItem="48T-mB-9uv" secondAttribute="centerX" id="SqX-xl-Z9X"/>
+                <constraint firstItem="48T-mB-9uv" firstAttribute="top" secondItem="Rwx-td-vln" secondAttribute="bottom" id="Wdb-7j-15b"/>
+                <constraint firstItem="Rwx-td-vln" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dIN-xm-QM7"/>
+                <constraint firstAttribute="bottom" secondItem="48T-mB-9uv" secondAttribute="bottom" id="sWd-h4-8xg"/>
+                <constraint firstItem="Rwx-td-vln" firstAttribute="top" secondItem="48T-mB-9uv" secondAttribute="top" constant="-30" id="srV-JS-tQj"/>
+            </constraints>
         </view>
     </objects>
 </document>

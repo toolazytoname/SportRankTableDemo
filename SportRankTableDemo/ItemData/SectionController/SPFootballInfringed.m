@@ -11,6 +11,6 @@
 @implementation SPFootballInfringed
 -(void)requestData
 {
-    [self requestFootballPlayerRank:@"9"];
+    [self requestFootballPlayerRank:@"9" limit:@"10"];
 }
 @end

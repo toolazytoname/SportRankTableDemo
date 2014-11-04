@@ -27,7 +27,7 @@
 		</array>
 		<key>keys</key>
 		<array>
-			<string>teamId</string>
+			<string>teamOrder</string>
 			<string>teamCn</string>
 			<string>score</string>
 			<string>count</string>

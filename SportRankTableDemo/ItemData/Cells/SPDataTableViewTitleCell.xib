@@ -13,7 +13,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fio-TP-lGE">
-                        <rect key="frame" x="7" y="1" width="300" height="21"/>
+                        <rect key="frame" x="7" y="0.0" width="300" height="24"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -24,6 +24,7 @@
             <connections>
                 <outlet property="titleLabel" destination="fio-TP-lGE" id="63a-UH-fDr"/>
             </connections>
+            <point key="canvasLocation" x="398" y="329.5"/>
         </tableViewCell>
     </objects>
 </document>

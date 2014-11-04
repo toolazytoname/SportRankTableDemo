@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "SPItemDataViewController.h"
+#import "SPItemListViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,8 +20,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    SPItemDataViewController *viewController = [[SPItemDataViewController alloc] initWithNibName:@"SPItemDataViewController" bundle:nil];
+//    SPItemDataViewController *viewController = [[SPItemDataViewController alloc] initWithNibName:@"SPItemDataViewController" bundle:nil];
+//    self.window.rootViewController = viewController;
+//    
+    SPItemListViewController *viewController = [[SPItemListViewController alloc] initWithNibName:@"SPItemListViewController" bundle:nil];
     self.window.rootViewController = viewController;
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

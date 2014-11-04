@@ -11,6 +11,6 @@
 @implementation SPFootballSaves
 -(void)requestData
 {
-    [self requestFootballPlayerRank:@"6"];
+    [self requestFootballPlayerRank:@"6" limit:@"10"];
 }
 @end

@@ -11,6 +11,6 @@
 @implementation SPFootballRedYellow
 -(void)requestData
 {
-    [self requestFootballPlayerRank:@"11"];
+    [self requestFootballPlayerRank:@"11" limit:@"10"];
 }
 @end
