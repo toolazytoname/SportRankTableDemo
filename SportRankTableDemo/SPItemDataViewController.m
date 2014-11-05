@@ -15,7 +15,8 @@ typedef enum {
     SPItemDataTypeNBA = 1,
     SPItemDataTypeCBA = 2,
     SPItemDataTypeFootball = 3,//英超
-    SPItemDataTypeFootballGroup = 4 //欧冠, 世界杯，亚冠，积分榜分组
+    SPItemDataTypeFootballGroup = 4, //欧冠, 世界杯，亚冠，积分榜分组
+    SPItemDataTypeTennis = 5
 //    WordCup
 }SPItemDataType;
 
@@ -29,12 +30,6 @@ typedef enum {
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.dataTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    // Do any additional setup after loading the view from its nib.
-//    [self allocFakeData];
-//    [self allocFakeDataFootballEurope];
-//    [self allocFakeDataFootballEnglish];
-//    [self allocFakeDataFootballWordCup];
-//    [self allocFakeDataCBA];
     SPItemDataType status = [self getType:self.viewControllerParam];
     [self requestRankWithStatus:status];
 }
@@ -69,7 +64,6 @@ typedef enum {
         }
         else if ([menuItem.itemID isEqualToString:@"108"])//世界杯
         {
-//            status = SPItemDataTypeFootballWordCup;
             status = SPItemDataTypeFootballGroup;
         }
         else if([menuItem.itemID isEqualToString:@"10"])//欧冠
@@ -82,7 +76,6 @@ typedef enum {
         }
         else if ([menuItem.itemID isEqualToString:@"328"])//亚冠
         {
-//            status = SPItemDataTypeFootballWordCup;//格式和世界杯一样
             status = SPItemDataTypeFootballGroup;
         }
         else if([menuItem.itemID isEqualToString:@"4"])//英超
@@ -104,6 +97,10 @@ typedef enum {
         else if([menuItem.itemID isEqualToString:@"5"])//法甲
         {
             status = SPItemDataTypeFootball;
+        }
+        else if ([menuItem.itemID isEqualToString:@"tennis"])//网球
+        {
+            status = SPItemDataTypeTennis;
         }
     }
     return status;
@@ -134,6 +131,9 @@ typedef enum {
             break;
         case SPItemDataTypeFootballGroup:
             fileName = @"SPItemDataTypeFootballGroup";
+            break;
+        case SPItemDataTypeTennis:
+            fileName = @"SPItemDataTypeTennis";
             break;
         case SPItemDataTypeOther:
             NSLog(@"排行榜类型为别的类型 SPItemDataTypeOther");
@@ -190,41 +190,7 @@ typedef enum {
     return instance;
 }
 
--(void)allocFakeData
-{
-    self.viewControllerParam = [[SPMenuItem alloc] init];
-    self.viewControllerParam.itemID = @"nba";
-    self.viewControllerParam.itemDataFrom = @"nba";
-}
 
-//欧冠
--(void)allocFakeDataFootballEurope
-{
-    self.viewControllerParam = [[SPMenuItem alloc] init];
-    self.viewControllerParam.itemID = @"10";
-    self.viewControllerParam.itemDataFrom = @"opta";
-}
-//英超
--(void)allocFakeDataFootballEnglish
-{
-    self.viewControllerParam = [[SPMenuItem alloc] init];
-    self.viewControllerParam.itemID = @"4";
-    self.viewControllerParam.itemDataFrom = @"opta";
-}
-//世界杯
--(void)allocFakeDataFootballWordCup
-{
-    self.viewControllerParam = [[SPMenuItem alloc] init];
-    self.viewControllerParam.itemID = @"108";
-    self.viewControllerParam.itemDataFrom = @"opta";
-}
-//cba
--(void)allocFakeDataCBA
-{
-    self.viewControllerParam = [[SPMenuItem alloc] init];
-    self.viewControllerParam.itemID = @"cba";
-    self.viewControllerParam.itemDataFrom = @"cba";
-}
 
 -(IBAction)hideAction:(id)sender
 {

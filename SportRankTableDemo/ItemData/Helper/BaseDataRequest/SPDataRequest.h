@@ -64,3 +64,10 @@
 
 @end
 
+/**
+ *  获取网球 项目页数据排行榜
+ */
+#define SPTennisOrderKey @"SPTennisOrderKey"
+@interface SPTennisOrderRequest : SPBaseDataRequest
+
+@end

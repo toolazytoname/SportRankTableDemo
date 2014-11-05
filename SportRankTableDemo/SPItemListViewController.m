@@ -38,9 +38,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"idenfifier"];
     }
     SPMenuItem *item = [self.dataList objectAtIndex:indexPath.row];
-//    cell.textLabel.text = textLabel
     cell.textLabel.text = item.itemName;
-    cell.detailTextLabel.text = item.itemName;
     return cell;
 }
 
@@ -66,21 +64,41 @@
     item1.itemDataFrom = @"opta";
     
     SPMenuItem *item2 = [[SPMenuItem alloc] init];
-    item1.itemName = @"英超";
+    item2.itemName = @"英超";
     item2.itemID = @"4";
     item2.itemDataFrom = @"opta";
     
     SPMenuItem *item3 = [[SPMenuItem alloc] init];
-    item1.itemName = @"世界杯";
+    item3.itemName = @"世界杯";
     item3.itemID = @"108";
     item3.itemDataFrom = @"opta";
     
     SPMenuItem *item4 = [[SPMenuItem alloc] init];
-    item1.itemName = @"CBA";
+    item4.itemName = @"CBA";
     item4.itemID = @"cba";
     item4.itemDataFrom = @"cba";
     
-    NSArray *itemArray = [NSArray arrayWithObjects:item1,item2,item3,item4,nil];
+    SPMenuItem *item5 = [[SPMenuItem alloc] init];
+    item5.itemName = @"中超";
+    item5.itemID = @"213";
+    item5.itemDataFrom = @"opta";
+    
+    SPMenuItem *item6 = [[SPMenuItem alloc] init];
+    item6.itemName = @"网球";
+    item6.itemID = @"tennis";
+    item6.itemDataFrom = @"bet007_tennis";
+    
+    SPMenuItem *item7 = [[SPMenuItem alloc] init];
+    item7.itemName = @"亚冠";
+    item7.itemID = @"328";
+    item7.itemDataFrom = @"opta";
+
+    
+    
+    
+    
+    
+    NSArray *itemArray = [NSArray arrayWithObjects:item1,item2,item3,item4,item5,item6,item7,nil];
     return itemArray;
 }
 

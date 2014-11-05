@@ -254,3 +254,38 @@
 
 
 
+
+@implementation SPTennisOrderRequest : SPBaseDataRequest
+-(NSString *)getURL
+{
+    return @"http://platform.sina.com.cn/sports_all/client_api?";
+}
+-(SPHTTPRequestMethod)getHttpRequestMethod
+{
+    return SPHTTPRequestMethodGET;
+}
+
+-(void)dataProcess
+{
+    [super dataProcess];
+    NSArray *itemArray = [[[self.resultDataDic objectForKeyNotNull:@"result"] objectForKeyNotNull:@"data"] objectForKeyNotNull:@"data"] ;
+    NSMutableArray *returnDataArray = [NSMutableArray array];
+    if (itemArray && [itemArray isKindOfClass:[NSArray class]]) {
+        [itemArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            if ([obj isKindOfClass:[NSDictionary class]]) {
+                SPTennisPlayOrderItem *item = [SPTennisPlayOrderItem modelObjectWithDictionary:obj];
+                [returnDataArray addObject:item];
+            }
+        }];
+    }
+    if (returnDataArray && returnDataArray.count >0) {
+        [self.resultDataDic setObject:returnDataArray forKey:SPTennisOrderKey];
+    }
+
+}
+@end
+
+
+
+
+
