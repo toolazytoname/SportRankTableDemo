@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SportRankTableDemo/ItemData/Cells/SPDataTableViewCell.m"
-            timestampString = "436695161.20234"
+            filePath = "SportRankTableDemo/ItemData/SectionController/SPTennisChina.m"
+            timestampString = "436864523.525785"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "-updateCellWithItem:indexPath:param:keys:width:"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "-requestData"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

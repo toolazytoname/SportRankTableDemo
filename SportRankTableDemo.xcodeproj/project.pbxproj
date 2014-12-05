@@ -105,6 +105,8 @@
 		447DDAD71A033AB20093753D /* SPBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 447DDAD61A033AB20093753D /* SPBaseModel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		447DDADA1A0376CC0093753D /* SPItemDataTitlesHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 447DDAD91A0376CC0093753D /* SPItemDataTitlesHeadView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		447DDADC1A0377210093753D /* SPItemDataTitlesHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 447DDADB1A0377210093753D /* SPItemDataTitlesHeadView.xib */; };
+		449CF6711A300F7B00C5B65D /* SPScrollDataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 449CF6701A300F7B00C5B65D /* SPScrollDataTableViewCell.m */; };
+		449CF6731A30106600C5B65D /* SPScrollDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 449CF6721A30106600C5B65D /* SPScrollDataTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -311,6 +313,9 @@
 		447DDAD81A0376CC0093753D /* SPItemDataTitlesHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPItemDataTitlesHeadView.h; sourceTree = "<group>"; };
 		447DDAD91A0376CC0093753D /* SPItemDataTitlesHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPItemDataTitlesHeadView.m; sourceTree = "<group>"; };
 		447DDADB1A0377210093753D /* SPItemDataTitlesHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPItemDataTitlesHeadView.xib; sourceTree = "<group>"; };
+		449CF66F1A300F7B00C5B65D /* SPScrollDataTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPScrollDataTableViewCell.h; sourceTree = "<group>"; };
+		449CF6701A300F7B00C5B65D /* SPScrollDataTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPScrollDataTableViewCell.m; sourceTree = "<group>"; };
+		449CF6721A30106600C5B65D /* SPScrollDataTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPScrollDataTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -360,6 +365,9 @@
 				4457AD691A0756690041E659 /* SPDataTableViewTitleCell.h */,
 				4457AD6A1A0756690041E659 /* SPDataTableViewTitleCell.m */,
 				4457AD6C1A0756850041E659 /* SPDataTableViewTitleCell.xib */,
+				449CF66F1A300F7B00C5B65D /* SPScrollDataTableViewCell.h */,
+				449CF6701A300F7B00C5B65D /* SPScrollDataTableViewCell.m */,
+				449CF6721A30106600C5B65D /* SPScrollDataTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -885,6 +893,7 @@
 				4469E3F51A08D219006FBC4B /* SPItemListViewController.xib in Resources */,
 				447DDADC1A0377210093753D /* SPItemDataTitlesHeadView.xib in Resources */,
 				4469C83C19F8D68300C81166 /* LaunchScreen.xib in Resources */,
+				449CF6731A30106600C5B65D /* SPScrollDataTableViewCell.xib in Resources */,
 				4469C83919F8D68300C81166 /* Images.xcassets in Resources */,
 				447C3D841A09D55A005ED28D /* SPItemDataTypeTennis.plist in Resources */,
 				441DA7C01A00E993007017EE /* SPItemDataViewController.xib in Resources */,
@@ -919,6 +928,7 @@
 				447367381A01D98C00B0D79A /* SPItemDataBaseSectionController.m in Sources */,
 				441DA7D31A00F343007017EE /* NSArray+Safe.m in Sources */,
 				4457AD661A072A8F0041E659 /* SPNBAFreethrows.m in Sources */,
+				449CF6711A300F7B00C5B65D /* SPScrollDataTableViewCell.m in Sources */,
 				4469E3DE1A08750A006FBC4B /* LTFormCell.m in Sources */,
 				4457AD851A07801A0041E659 /* SPFootballKillerBalls.m in Sources */,
 				4469E3E51A08750A006FBC4B /* UITableViewCell+Helper.m in Sources */,
