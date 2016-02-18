@@ -1,2 +1,2 @@
 # SportRankTableDemo
-项目中用到的表格样例
+体育项目中用到的数据表格demo
